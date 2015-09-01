@@ -94,7 +94,7 @@ au BufRead,BufNewFile *.ini      setlocal ft=dosini
 " 设置着色模式和字体
 if g:isWIN
     colorscheme molokai
-    set guifont=Monaco:h11
+    set guifont=Droid_Sans_Mono_Dotted_for_Powe:h12
 elseif g:isMAC
     colorscheme molokai
     set guifont=Monaco:h14
@@ -276,6 +276,7 @@ Plugin 'gmarik/vundle'
 " vim-scripts repos  
 Plugin 'jsbeautify'
 Plugin 'The-NERD-Commenter'
+Plugin 'minibufexplorerpp'
 Plugin 'The-NERD-tree'
 Plugin 'bling/vim-airline'
 Plugin 'winmanager'
@@ -427,8 +428,15 @@ endif
 "**************************
 set laststatus=2
 let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'badwolf'
+let g:airline#extensions#tabline#enabled = 0
+"let g:airline_theme = 'badwolf'
+"let g:airline_left_sep='>'
+"let g:airline_right_sep='<'
+let g:airline_detect_modified=1
+let g:airline_detect_paste=1 "粘贴检测
+let g:airline_detect_iminsert=0 
+ let g:airline_exclude_filenames = [] " see source for current list
+let g:airline_exclude_filetypes = [] " see source for current list
 "**************************
 "for easy-align
 "**************************
